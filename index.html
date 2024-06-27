@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- favicon -->
+    <link rel="icon" href="./src/assets/images/favicon-32x32.png">
+    <!-- meta tags -->
+    <title>Contact form</title>
+    <meta title="title" content="Contact form">
+    <meta title="description" content="Building accessible forms is a crucial task for front-end developers. 
+    This challenge will help you practice building a form with several input types and validation.">
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    <!-- custom css link -->
+    <link rel="stylesheet" href="./src/assets/css/styles.css">
+  </head>
+  <body>
+    <!-- #CONTACT FORM -->
+    <main class="contact-form section">
+      <div class="container">
+        <h1 class="title">Contact Us</h1>
+
+        <div class="form">
+          <div class="input-box">
+            <div class="input-field">
+              <label for="input-name">First Name <span class="*">*</span></label>
+              <input class="item" type="text" id="input-name" data-name>
+              <span class="error" data-error-name>This field is required</span>
+            </div>
+
+            <div class="input-field">
+              <label for="input-last-name">Last Name <span class="*">*</span></label>
+              <input class="item" type="text" id="input-last-name" data-last-name>
+              <span class="error" data-error-last-name>This field is required</span>
+            </div>
+          </div>
+
+          <div class="input-field">
+            <label for="input-email-address">Email Address <span class="*">*</span></label>
+            <input class="item" type="text" id="input-email-address" data-email-address>
+            <span class="error error-email-address-one" data-error-email-address-one>Please enter a valid email address</span>
+            <span class="error" data-error-email-address-two>This field is required</span>
+          </div>
+
+          <div class="radio-selected">
+            <label>Query Type <span class="*">*</span></label>
+            <div class="radio-selected-list">
+              <div class="radio-selected-box" data-radio-selected-box>  <!-- for loop -->
+                <!-- <div></div> -->
+                <input class="radio-selected-item" type="checkbox" data-radio-selected-item>
+                <img src="./src/assets/images/icon-radio-selected.svg" alt="icon-radio-selected" loading="lazy" data-icon-radio-selected>
+                <h3 class="radio-selected-text">General Enquiry</h3>
+              </div>
+
+              <div class="radio-selected-box" data-radio-selected-box> <!-- for loop -->
+                <input class="radio-selected-item" type="checkbox" data-radio-selected-item>
+                <img src="./src/assets/images/icon-radio-selected.svg" alt="icon-radio-selected" loading="lazy" data-icon-radio-selected>
+                <h3 class="radio-selected-text">Support Request</h3>
+              </div>
+            </div>
+            <span class="error" data-error-radio-selected>Please select a query type</span>
+          </div>
+
+          <div class="textarea-message">
+            <label for="textarea">Message <span class="*">*</span></label>
+            <textarea class="item" id="textarea" rows="5" cols="50" data-textarea></textarea>
+            <span class="error" data-error-textarea>This field is required</span>
+          </div>
+        </div>
+
+        <div class="checkbox-text">
+          <div class="checkbox-box">
+            <img src="./src/assets/images/icon-checkbox-check.svg" alt="icon-checkbox-check" loading="lazy" data-checkbox-check>
+            <input type="checkbox" id="checkbox" class="checkbox" data-checkbox>
+            <label for="checkbox" data-pr-checkbox>I consent to being contacted by the team <span class="*">*</span></label>
+          </div>
+          <span class="error" data-error-checkbox-text>To submit this form, please consent to being contacted</span>
+        </div>
+
+        <button class="btn-primary" data-btn-check>Submit</button>
+      </div>
+    </main>
+
+    <!-- #MESSAGE SENT -->
+    <div class="message-send" data-message-send>
+      <h1 class="message-send-top">
+        <img src="./src/assets/images/icon-success-check.svg" alt="icon-success-check" loading="lazy">
+        <span class="span">Message Sent!</span>
+      </h1>
+      <label class="message-text">Thanks for completing the form. We'll be in touch soon!</label>
+    </div>
+
+    <!-- custom js link -->
+    <script src="./src/main.js"></script>
+  </body>
+</html>
