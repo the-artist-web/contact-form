@@ -5,6 +5,7 @@
   <li>HTML</li>
   <li>CSS</li>
   <li>JS</li>
+  <li>TS</li>
 </ul>
 
 <h2>Demo Screeshots</h2>
